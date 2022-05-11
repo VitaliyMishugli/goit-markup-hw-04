@@ -247,7 +247,7 @@ button.secondary{
 /* ==============Робота з іконкою */
 
 
-.list-item{
+.contact-link{
 	display: flex;
 	align-items: center;
 }
@@ -257,8 +257,8 @@ button.secondary{
 	margin-right: 10px;
 }
 
-.icon-header:hover{
-	color: var(--accent-text-color);
+.icon-header{
+	fill: currentColor;
 } 
 
 .contact-link:hover,
