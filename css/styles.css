@@ -96,15 +96,15 @@ button:focus{
 }
 
 button.primary{
-		color: var(--secondary-text-color);
-		background-color: var(--accent-text-color);
-		font-family: inherit;
-		font-style: normal;
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 1.62;
-		text-align: center;
-		letter-spacing: inherit;
+	color: var(--secondary-text-color);
+	background-color: var(--accent-text-color);
+	font-family: inherit;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.62;
+	text-align: center;
+	letter-spacing: inherit;
 }
 
 button.secondary{
@@ -119,10 +119,6 @@ button.secondary{
 }
 
 
-/* Header */
-/* .hero, .our-features{
-	outline: 2px solid red;
-} */
 
 .header{
 	border-bottom: 1px solid var(--header-bot-border);
@@ -187,8 +183,12 @@ button.secondary{
 }
 
 .header .link:hover
-/* .list a:hover */
+.list a:hover 
 {
+	color: var(--accent-text-color);
+}
+
+.navigation .link:hover{
 	color: var(--accent-text-color);
 }
 
@@ -237,13 +237,15 @@ button.secondary{
 }
 
 .list a{
-	display: flex;
+	/* display: flex; */
 	align-items: center;
 	color: var(--primary-text-color);
 	font-weight: 500;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 }
+
+
 
 /* ==============Робота з іконкою */
 
@@ -575,8 +577,8 @@ button.secondary{
 
 .projects-cards{
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	/* align-items: center;
+	justify-content: center; */
 	flex-wrap: wrap;
 }
 
@@ -607,6 +609,9 @@ button.secondary{
 .portfolio-title{
 	margin-bottom: 4px;
 }
+
+
+
 
 
 /* Footer */
