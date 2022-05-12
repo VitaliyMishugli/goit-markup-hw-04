@@ -444,8 +444,8 @@ button.secondary{
 
 .member-links{
 	display: flex;
-		align-items: center;
-		justify-content: center;
+	align-items: center;
+	justify-content: center;
 
 	width: 44px;
 	height: 44px;
@@ -661,7 +661,6 @@ a.footer-link{
 .add{
 	display: flex;
 	align-items: center;
-	border: 1px solid red;
 }
 
 .add-title{
@@ -691,13 +690,49 @@ a.footer-link{
 	margin-right: 0;
 }
 
-.footer-container-element{
-	/* width: 44px;
-	height: 44px;
-	border: 1px solid yellow;
-	border-radius: 50%; */
+.add.footer-container-element{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
+.list.footer-add{
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.footer-add-element{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background: #ffffff1a;
+
+	margin-right: 10px;
+}
+
+.footer-add-element:hover{
+	background-color: var(--accent-text-color);
+}
+
+.footer-add-element:last-child{
+	margin-right: 0;
+}
+
+.add-icon{
+	display: block;
+	fill: var(--secondary-text-color);
+}
+
+.add-link{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 
 
