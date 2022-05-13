@@ -277,15 +277,20 @@ button.secondary{
 
 /* Hero */
 .hero{
+	color: var(--secondary-text-color);
+
 	background-color: var(--header-footer-bg-color);
-	
 	background-image: 
 	linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
 	url('../images/backgrounds/hero-bg.jpg');
-	color: var(--secondary-text-color);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	text-align: center;
 	padding-top: 200px;
 	padding-bottom: 200px;
+	min-width: 1600px;
+	height: 600px;
 }
 
 .hero-title{
@@ -421,6 +426,7 @@ button.secondary{
 	letter-spacing: 0.03em;
 	color: var(--primary-text-color);
 	text-align: center;
+	margin-bottom: 28px;
 }
 
 .team-member{
@@ -433,46 +439,45 @@ button.secondary{
 	margin-right: 0;
 }
 
-.member-slinks{
+.list.slinks{
 	padding-left: 32px;
 	padding-right: 32px;
+	
 }
 
-.list.slinks{
-	display: flex;
-	align-items: center;
-	padding-top: 16px;
-}
-
-.member-links{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	width: 44px;
-	height: 44px;
-	border-radius: 50%;
+.slinks-item{
 	margin-right: 10px;
 }
 
-.member-links:hover,
-.member-links:focus{
-	background-color: var(--accent-text-color);
+.slinks-link{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	color: var(--primary-text-color);
 }
 
-.member-link:last-child{
+.slinks-item:last-child {
 	margin-right: 0;
 }
 
+.slinks-link:hover,
+.slinks-link:focus{
+	background-color: var(--accent-text-color);
+}
+
 .member-icon{
-	fill: var(--icon-color);
+	fill: currentColor;
 }
 
-.member-icon:hover{
-	fill: var(--primary-bg-color);
+.slinks-link:hover .member-icon,
+.slinks-link:focus .member-icon{
+	fill: var(--secondary-text-color) ;
 }
 
-.member-link{
+.slinks-link{
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -496,7 +501,7 @@ button.secondary{
 	justify-content: center;
 }
 
-.client {
+/* .client {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -505,20 +510,25 @@ button.secondary{
 
 	border: 1px solid var(--icon-color);
 	border-radius: 4px;
-}
+} */
 
 .client:not(:last-child) {
 	margin-right: 30px;
 }
 
-.contact-link{
+.client-link{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	width: 170px;
+	height: 92px;
+	
+	border: 1px solid var(--icon-color);
+	border-radius: 4px;
 }
 
-.client:hover,
-.client:focus{
+.client-link:hover,
+.client-link:focus{
 	border: 1px solid var(--accent-text-color);
 }
 
@@ -526,8 +536,9 @@ button.secondary{
 	fill: currentColor;
 }
 
-.client-icon:hover {
-	fill: var(--accent-text-color);
+.client-link:hover .client-icon,
+.client-link:focus .client-icon{
+	fill:var(--accent-text-color);
 }
 
 
@@ -560,6 +571,11 @@ button.secondary{
 	border-radius: 6px;
 }
 
+.projects button:hover,
+.projects button:focus{
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .projects.list{
 	display: flex;
 	align-items: center;
@@ -577,8 +593,6 @@ button.secondary{
 
 .projects-cards{
 	display: flex;
-	/* align-items: center;
-	justify-content: center; */
 	flex-wrap: wrap;
 }
 
@@ -606,12 +620,18 @@ button.secondary{
 	padding: 20px 24px;
 }
 
+.portfolio-page{
+	display: block;
+}
+
+.portfolio-page:hover,
+.portfolio-page:focus{
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-title{
 	margin-bottom: 4px;
 }
-
-
-
 
 
 /* Footer */
@@ -642,8 +662,6 @@ a.footer-link{
 	color: var(--primary-text-color);
 }
 
-
-
 .address-list{
 	display: block;
 }
@@ -660,7 +678,6 @@ a.footer-link{
 .footer-container{
 	display: flex;
 	align-items: baseline;
-	justify-content: start;
 }
 
 .add{
@@ -720,7 +737,8 @@ a.footer-link{
 	margin-right: 10px;
 }
 
-.footer-add-element:hover{
+.footer-add-element:hover,
+.footer-add-element:focus{
 	background-color: var(--accent-text-color);
 }
 
@@ -728,16 +746,23 @@ a.footer-link{
 	margin-right: 0;
 }
 
-.add-icon{
-	display: block;
-	fill: var(--secondary-text-color);
-}
-
-.add-link{
+a.add-link {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background: #ffffff1a;
+	color: var(--secondary-text-color);
 }
+
+.add-icon{
+	display: block;
+	fill: currentColor;
+}
+
+
 
 
 
