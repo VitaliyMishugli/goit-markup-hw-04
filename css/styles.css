@@ -136,7 +136,7 @@ button.secondary{
 	align-items: center;
 }
 
-.list{
+.list.header-contacts{
 	display: flex;
 	align-items: center;
 	margin-left: auto;
@@ -440,9 +440,8 @@ button.secondary{
 }
 
 .list.slinks{
-	padding-left: 32px;
-	padding-right: 32px;
-	
+	display: flex;
+	justify-content: center;
 }
 
 .slinks-item{
@@ -456,7 +455,7 @@ button.secondary{
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;
-	color: var(--primary-text-color);
+	color: var(--icon-color);
 }
 
 .slinks-item:last-child {
@@ -525,6 +524,8 @@ button.secondary{
 	
 	border: 1px solid var(--icon-color);
 	border-radius: 4px;
+
+	color: var(--icon-color);
 }
 
 .client-link:hover,
@@ -671,6 +672,16 @@ a.footer-link{
 	margin-bottom: 20px;
 }
 
+.address-item>.footer-address:hover,
+.address-item>.footer-address:focus {
+	color: var(--accent-text-color);
+}
+
+.address-item > .footer-link:hover,
+.address-item > .footer-link:focus{
+	color: var(--accent-text-color);
+}
+
 .address-item:not(:last-child){
 	margin-bottom: 9px;
 }
@@ -753,7 +764,6 @@ a.add-link {
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;
-	background: #ffffff1a;
 	color: var(--secondary-text-color);
 }
 
